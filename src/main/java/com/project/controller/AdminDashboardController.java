@@ -5,8 +5,10 @@ import com.project.service.UserService;
 import javafx.collections.FXCollections;
 
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -68,5 +70,21 @@ public class AdminDashboardController implements UserAwareController {
         alert.setHeaderText(null);
         alert.setContentText(content);
         alert.showAndWait();
+    }
+
+    public void handleSystemLogs(ActionEvent actionEvent) {
+
+    }
+
+    public void handleLogout(ActionEvent actionEvent) {
+
+    }
+
+    public void handleAddUser(ActionEvent actionEvent) {
+
+    }
+
+    public void handleEditUser(ActionEvent actionEvent) {
+
     }
 }

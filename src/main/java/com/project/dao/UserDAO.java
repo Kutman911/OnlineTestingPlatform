@@ -9,7 +9,7 @@ import java.util.Optional;
 
 public class UserDAO {
 
-    // CREATE
+
     public boolean createUser(User user) {
         String sql = "INSERT INTO users (username, password, email, role, first_name, last_name) " +
                 "VALUES (?, ?, ?, ?, ?, ?)";
@@ -61,7 +61,7 @@ public class UserDAO {
         return Optional.empty();
     }
 
-    // READ (by username)
+
     public Optional<User> findByUsername(String username) {
         String sql = "SELECT * FROM users WHERE username = ?";
 
@@ -80,7 +80,7 @@ public class UserDAO {
         return Optional.empty();
     }
 
-    // READ (all)
+
     public List<User> findAll() {
         List<User> users = new ArrayList<>();
         String sql = "SELECT * FROM users";
@@ -98,7 +98,7 @@ public class UserDAO {
         return users;
     }
 
-    // READ (by role)
+
     public List<User> findByRole(String role) {
         List<User> users = new ArrayList<>();
         String sql = "SELECT * FROM users WHERE role = ?";
@@ -118,7 +118,7 @@ public class UserDAO {
         return users;
     }
 
-    // UPDATE
+
     public boolean updateUser(User user) {
         String sql = "UPDATE users SET username = ?, password = ?, email = ?, " +
                 "first_name = ?, last_name = ? WHERE id = ?";
@@ -141,7 +141,7 @@ public class UserDAO {
         }
     }
 
-    // DELETE
+
     public boolean deleteUser(int id) {
         String sql = "DELETE FROM users WHERE id = ?";
 
@@ -157,7 +157,7 @@ public class UserDAO {
         }
     }
 
-    // Helper method to create User object from ResultSet
+
     private User createUserFromResultSet(ResultSet rs) throws SQLException {
         String role = rs.getString("role");
         User user;

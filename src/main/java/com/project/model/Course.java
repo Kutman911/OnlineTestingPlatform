@@ -1,6 +1,7 @@
 package com.project.model;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class Course {
     private int id;
